@@ -47,6 +47,7 @@ Due to time constraints there are some "Missing" features that I would normally 
 - In Memory DB or Mock to run integration tests.
 - Separate concerns between `Queries` and `Commands`.
 - HealthCheck endpoint that shows Database Integrity. [This](https://github.com/xabaril/AspNetCore.Diagnostics.HealthChecks) is a good library to use.
+- Depending on the security needed sometimes it is good to add an extra API in between of the service and the outside world working as gateway.
 
 ## Run on docker
 
