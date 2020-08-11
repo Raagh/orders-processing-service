@@ -13,7 +13,7 @@ It displays a simple scenario where you can add/update/delete/retrieve orders in
 }
 ```
 
-`orders/by-users` endpoint returns an aggregation of the orders grouped by userId with a sum of the total amount of the orders -
+`orders/by-users` endpoint returns an aggregation of the orders grouped by userId with a sum of the total amount of the orders.
 
 ```json
 {
