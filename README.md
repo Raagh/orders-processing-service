@@ -31,8 +31,8 @@ It displays a simple scenario where you can add/update/delete/retrieve orders in
 - I use [AutoMapper](https://automapper.org/) to map between domain models and API models.
 - I use [Moq](https://github.com/moq/moq) and [XUnit](https://xunit.github.io/) for unit testing the `OrdersService`.
 
-
 ## Extra included features.
+
 - Deployable as a [Docker](https://www.docker.com/) container.
 - The default URL shows a [Swagger](https://swagger.io/) page with the API documentation.
 
@@ -41,8 +41,28 @@ It displays a simple scenario where you can add/update/delete/retrieve orders in
 Due to time constraints there are some "Missing" features that I would normally implement in a "Real World" Project. Some of them are the following:
 
 - Authentication and Authorization using something like `Identity` and `JWT`.
+- Add pagination to the endpoints including limit and offset.
 - Complete separation between Domain Models and Database Models.
 - Generic implementation of the `Repository Pattern` when other repositories are introduced to the service.
 - In Memory DB or Mock to run integration tests.
 - Separate concerns between `Queries` and `Commands`.
 - HealthCheck endpoint that shows Database Integrity. [This](https://github.com/xabaril/AspNetCore.Diagnostics.HealthChecks) is a good library to use.
+
+## Run on docker
+
+On a terminal with OrdersProcessingService as root run the following commands:
+
+```bash
+docker build -t orders-service .
+docker run -p 8080:80 orders-service
+```
+
+## Run on dotnet
+
+On a terminal with OrdersProcessingService.Api as root run the following commands:
+
+```bash
+dotnet restore
+dotnet build
+dotnet run
+```
