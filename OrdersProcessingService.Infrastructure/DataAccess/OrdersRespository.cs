@@ -7,7 +7,6 @@ using System.Linq;
 using System.Collections.Generic;
 using OrdersProcessingService.Core.Application;
 using OrdersProcessingService.Core.Domain;
-using System.Linq.Expressions;
 
 namespace OrdersProcessingService.Infrastructure.DataAccess
 {
@@ -19,12 +18,12 @@ namespace OrdersProcessingService.Infrastructure.DataAccess
 
         public OrdersRespository(IOptions<OrdersProcessingServiceOptions> options, ILogger<OrdersRespository> logger)
         {
-            var configuration = options.Value;
             if (options == null)
             {
                 throw new ArgumentNullException(nameof(options));
             }
 
+            var configuration = options.Value;
             var client = new MongoClient(configuration.DatabaseConnectionString);
 
             this.database = client.GetDatabase(configuration.DatabaseName);

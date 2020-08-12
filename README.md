@@ -13,7 +13,8 @@ It displays a simple scenario where you can add/update/delete/retrieve orders in
 }
 ```
 
-`orders/by-users` endpoint returns an aggregation of the orders grouped by userId with a sum of the total amount of the orders.
+API endpoints are versioned as `v1` 
+`v1/orders/by-users` endpoint returns an aggregation of the orders grouped by userId with a sum of the total amount of the orders.
 
 ```json
 {
@@ -57,6 +58,8 @@ On a terminal with OrdersProcessingService as root run the following commands:
 ```bash
 docker build -t orders-service .
 docker run -p 8080:80 orders-service
+
+open https://localhost:8080/index.html for the swagger page
 ```
 
 ## Run on dotnet
