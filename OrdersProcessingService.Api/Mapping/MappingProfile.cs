@@ -11,11 +11,11 @@ namespace OrdersProcessingService.Api.Mapping
     {
         public MappingProfile()
         {
-            // Domain to Resource
+            // API to Domain
             CreateMap<Order, Model.Order>();
             CreateMap<OrdersByUser, Model.OrdersByUser>();
 
-            // Resource to Domain
+            // Domain to API
             CreateMap<Model.Order, Order>();
             CreateMap<Model.OrdersByUser, OrdersByUser>();
         }    

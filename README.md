@@ -1,6 +1,6 @@
 # Orders Processing Service
 
-The `Orders Processing Service` is a basic CRUD ASP.net core application that connects with MongoDB as requested for this interview.
+The `Orders Processing Service` is a basic CRUD ASP.net core application that connects with MongoDB that was requested as a coding task during an interview process.
 It displays a simple scenario where you can add/update/delete/retrieve orders in a business application.
 
 `Order Model`
@@ -30,6 +30,7 @@ It displays a simple scenario where you can add/update/delete/retrieve orders in
 - Instead of running my own MongoDB instance I use a free tier on [MongoDB Cloud Atlas](https://www.mongodb.com/cloud/atlas).
 - I use [AutoMapper](https://automapper.org/) to map between domain models and API models.
 - I use [Moq](https://github.com/moq/moq) and [XUnit](https://xunit.github.io/) for unit testing the `OrdersService`.
+- I use [Swagger](https://swagger.io/) for API documentation.
 
 ## Extra included features.
 
@@ -46,7 +47,7 @@ Due to time constraints there are some "Missing" features that I would normally 
 - Generic implementation of the `Repository Pattern` when other repositories are introduced to the service.
 - In Memory DB or Mock to run integration tests.
 - Separate concerns between `Queries` and `Commands`.
-- HealthCheck endpoint that shows Database Integrity. [This](https://github.com/xabaril/AspNetCore.Diagnostics.HealthChecks) is a good library to use.
+- HealthCheck endpoint that shows Database Integrity. For that, I like this [library](https://github.com/xabaril/AspNetCore.Diagnostics.HealthChecks).
 - Depending on the security needed sometimes it is good to add an extra API in between of the service and the outside world working as gateway.
 
 ## Run on docker

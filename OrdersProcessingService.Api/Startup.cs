@@ -29,7 +29,7 @@ namespace OrdersProcessingService.Api
             services.AddControllers();
             services.Configure<OrdersProcessingServiceOptions>(this.Configuration.GetSection("Configuration"));
             services.AddScoped<IOrdersService, OrdersService>();
-            services.AddScoped<IOrdersRespository, OrdersRespository>();
+            services.AddSingleton<IOrdersRespository, OrdersRespository>();
 
             services.AddSwaggerGen(options =>
             {
