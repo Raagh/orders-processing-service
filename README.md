@@ -14,6 +14,7 @@ It displays a simple scenario where you can add/update/delete/retrieve orders in
 ```
 
 API endpoints are versioned as `v1` 
+
 `v1/orders/by-users` endpoint returns an aggregation of the orders grouped by userId with a sum of the total amount of the orders.
 
 ```json
@@ -49,7 +50,6 @@ Due to time constraints there are some "Missing" features that I would normally 
 - In Memory DB or Mock to run integration tests.
 - Separate concerns between `Queries` and `Commands`.
 - HealthCheck endpoint that shows Database Integrity. For that, I like this [library](https://github.com/xabaril/AspNetCore.Diagnostics.HealthChecks).
-- Depending on the security needed sometimes it is good to add an extra API in between of the service and the outside world working as gateway.
 
 ## Run on docker
 
