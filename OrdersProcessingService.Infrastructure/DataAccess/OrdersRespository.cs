@@ -41,7 +41,7 @@ namespace OrdersProcessingService.Infrastructure.DataAccess
                 .Group(x => x.UserId, y => new OrdersByUser
                 {
                     UserId = y.Key,
-                    Orders = y.Select(x => x.Id).ToArray(),
+                    Orders = y.Select(x => x.Id),
                     TotalAmount = y.Sum(x => x.Amount)
                 }).ToListAsync();
 
